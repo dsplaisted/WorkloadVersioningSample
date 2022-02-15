@@ -32,3 +32,19 @@ AOT Compiler EXE (mono-aot-cross.exe)
 ### MonoAOTCompiler.Task
 
 Includes (only) the MonoAOTCompiler task
+
+### MonoTargets.Sdk
+
+Mono MSBuild logic and tasks shared between ios, android, and wasm
+
+### Emscripten.Node
+
+Includes Node and MSBuild .props file pointing to it
+
+### Emscripten.Python
+
+Includes Python and MSBuild .props file pointing to it
+
+### Emscripten.Sdk
+
+Includes Emscripten and MSBuild .props file pointing to it.
