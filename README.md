@@ -15,3 +15,20 @@
       microsoft-net-sdk-emscripten-->Microsoft.NET.Runtime.Emscripten.Python[Emscripten.Python];
       microsoft-net-sdk-emscripten-->Microsoft.NET.Runtime.Emscripten.Sdk[Emscripten.Sdk];
 ```
+
+
+### WebAssembly.Sdk
+
+Build logic for WASM / AOT
+
+### Mono.browser-wasm
+
+Mono browser-wasm runtime pack
+
+### AOT.Cross.browser-wasm
+
+AOT Compiler EXE (mono-aot-cross.exe)
+
+### MonoAOTCompiler.Task
+
+Includes (only) the MonoAOTCompiler task
