@@ -9,14 +9,14 @@
       wasm-tools-->Microsoft.NETCore.App.Runtime.Mono.browser-wasm[Mono.browser-wasm];
       wasm-tools-->Microsoft.NETCore.App.Runtime.AOT.Cross.browser-wasm[AOT.Cross.browser-wasm];
       wasm-tools---->|extends|microsoft-net-runtime-mono-tooling;
-      microsoft-net-runtime-mono-tooling([microsoft-net-runtime-mono-tooling])-->Microsoft.NET.Runtime.MonoAOTCompiler.Task[MonoAOTCompiler.Task];
+      microsoft-net-runtime-mono-tooling(["microsoft-net-runtime-mono-tooling<BR><I>(abstract)</I>"])-->Microsoft.NET.Runtime.MonoAOTCompiler.Task[MonoAOTCompiler.Task];
       microsoft-net-runtime-mono-tooling-->Microsoft.NET.Runtime.MonoTargets.Sdk[MonoTargets.Sdk];
       end
       
       wasm-tools---->|extends|microsoft-net-sdk-emscripten;
       
       subgraph workload.emscripten
-      microsoft-net-sdk-emscripten([microsoft-net-sdk-emscripten])-->Microsoft.NET.Runtime.Emscripten.Node[Emscripten.Node];
+      microsoft-net-sdk-emscripten(["microsoft-net-sdk-emscripten<BR><I>(abstract)</I>"])-->Microsoft.NET.Runtime.Emscripten.Node[Emscripten.Node];
       microsoft-net-sdk-emscripten-->Microsoft.NET.Runtime.Emscripten.Python[Emscripten.Python];
       microsoft-net-sdk-emscripten-->Microsoft.NET.Runtime.Emscripten.Sdk[Emscripten.Sdk];
       end
