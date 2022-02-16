@@ -44,7 +44,7 @@ graph TD;
     microsoft-net-runtime-mono-tooling.6.0.100(["microsoft-net-runtime-mono-tooling<BR><I>(abstract)</I>"])-->Microsoft.NET.Runtime.MonoTargets.Sdk.6.0.100[MonoTargets.Sdk];
     end
     
-    wasm-tools.6.0.100-->wasm-tools-net6-abstract
+    wasm-tools.6.0.100----->wasm-tools-net6-abstract
     %%microsoft-net-runtime-mono-tooling-->microsoft-net-runtime.6-mono-tooling
 
     subgraph Mono.ToolChain.net6
@@ -57,7 +57,7 @@ graph TD;
     MonoAOTCompiler.Task.net6-->|alias|MonoAOTCompiler.Task.v6["MonoAOTCompiler.Task v6.0.0"]
     end
     
-    wasm-tools-net6-abstract---->|extends|microsoft-net-sdk6-emscripten;
+    wasm-tools-net6-abstract------>|extends|microsoft-net-sdk6-emscripten;
 
     subgraph workload.emscripten.net6
     microsoft-net-sdk6-emscripten(["microsoft-net6-sdk-emscripten<BR><I>(abstract)</I>"])-->Microsoft.NET.Runtime.6.Emscripten.Node[Emscripten.Node.6];
@@ -72,9 +72,11 @@ graph TD;
     wasm-tools.7.0.100([wasm-tools])-->Microsoft.NET.Runtime.WebAssembly.Sdk.7.0.100[WebAssembly.Sdk];
     wasm-tools.7.0.100-->|extends|microsoft-net-runtime-mono-tooling.7.0.100;
     microsoft-net-runtime-mono-tooling.7.0.100(["microsoft-net-runtime-mono-tooling<BR><I>(abstract)</I>"])-->Microsoft.NET.Runtime.MonoTargets.Sdk.7.0.100[MonoTargets.Sdk];
+    wasm-tools-net6-->wasm-tools.7.0.100
     end
     
-    wasm-tools.7.0.100-->wasm-tools-net7-abstract
+    wasm-tools.7.0.100---->wasm-tools-net7-abstract
+    wasm-tools-net6----->wasm-tools-net6-abstract
     
     subgraph Mono.ToolChain.net7
     wasm-tools-net7-abstract([wasm-tools-net7-abstract])-->Mono.browser-wasm.net7
@@ -86,7 +88,7 @@ graph TD;
     MonoAOTCompiler.Task.net7-->|alias|MonoAOTCompiler.Task.v7["MonoAOTCompiler.Task v7.0.0"]
     end
     
-    wasm-tools-net7-abstract---->|extends|microsoft-net-sdk7-emscripten;
+    wasm-tools-net7-abstract------>|extends|microsoft-net-sdk7-emscripten;
     
     subgraph workload.emscripten.net7
     microsoft-net-sdk7-emscripten(["microsoft-net7-sdk-emscripten<BR><I>(abstract)</I>"])-->Microsoft.NET.Runtime.7.Emscripten.Node[Emscripten.Node.7];
