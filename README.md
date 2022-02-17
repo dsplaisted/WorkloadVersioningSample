@@ -42,6 +42,7 @@ graph TD;
     wasm-tools.6.0.100([wasm-tools])-->Microsoft.NET.Runtime.WebAssembly.Sdk.6.0.100[WebAssembly.Sdk];
     wasm-tools.6.0.100-->|extends|microsoft-net-runtime-mono-tooling.6.0.100;
     microsoft-net-runtime-mono-tooling.6.0.100(["microsoft-net-runtime-mono-tooling<BR><I>(abstract)</I>"])-->Microsoft.NET.Runtime.MonoTargets.Sdk.6.0.100[MonoTargets.Sdk];
+    microsoft-net-runtime-mono-tooling.6.0.100-->Microsoft.NET.Runtime.MonoAOTCompiler.Task.6.0.100[MonoAOTCompiler.Task];
     end
     
     wasm-tools.6.0.100----->wasm-tools-net6-abstract
@@ -52,9 +53,6 @@ graph TD;
     Mono.browser-wasm.net6-->|alias|Mono.browser-wasm.v6["Mono.browser-wasm v6.0.0"]
     wasm-tools-net6-abstract-->AOT.Cross.browser-wasm.net6
     AOT.Cross.browser-wasm.net6-->|alias|AOT.Cross.browser-wasm.v6["AOT.Cross.browser-wasm v6.0.0"]
-    wasm-tools-net6-abstract-->|extends|microsoft-net-runtime.6-mono-tooling;
-    microsoft-net-runtime.6-mono-tooling(["microsoft-net-runtime.6-mono-tooling<BR><I>(abstract)</I>"])-->MonoAOTCompiler.Task.net6;
-    MonoAOTCompiler.Task.net6-->|alias|MonoAOTCompiler.Task.v6["MonoAOTCompiler.Task v6.0.0"]
     end
     
     wasm-tools-net6-abstract------>|extends|microsoft-net-sdk6-emscripten;
@@ -72,6 +70,7 @@ graph TD;
     wasm-tools.7.0.100([wasm-tools])-->Microsoft.NET.Runtime.WebAssembly.Sdk.7.0.100[WebAssembly.Sdk];
     wasm-tools.7.0.100-->|extends|microsoft-net-runtime-mono-tooling.7.0.100;
     microsoft-net-runtime-mono-tooling.7.0.100(["microsoft-net-runtime-mono-tooling<BR><I>(abstract)</I>"])-->Microsoft.NET.Runtime.MonoTargets.Sdk.7.0.100[MonoTargets.Sdk];
+    microsoft-net-runtime-mono-tooling.7.0.100-->Microsoft.NET.Runtime.MonoAOTCompiler.Task.7.0.100[MonoAOTCompiler.Task];
     wasm-tools-net6-->wasm-tools.7.0.100
     end
     
@@ -83,9 +82,6 @@ graph TD;
     Mono.browser-wasm.net7-->|alias|Mono.browser-wasm.v7["Mono.browser-wasm v7.0.0"]
     wasm-tools-net7-abstract-->AOT.Cross.browser-wasm.net7
     AOT.Cross.browser-wasm.net7-->|alias|AOT.Cross.browser-wasm.v7["AOT.Cross.browser-wasm v7.0.0"]
-    wasm-tools-net7-abstract-->|extends|microsoft-net-runtime.7-mono-tooling;
-    microsoft-net-runtime.7-mono-tooling(["microsoft-net-runtime.7-mono-tooling<BR><I>(abstract)</I>"])-->MonoAOTCompiler.Task.net7;
-    MonoAOTCompiler.Task.net7-->|alias|MonoAOTCompiler.Task.v7["MonoAOTCompiler.Task v7.0.0"]
     end
     
     wasm-tools-net7-abstract------>|extends|microsoft-net-sdk7-emscripten;
