@@ -1,0 +1,21 @@
+{
+  "version": "6.0.0",
+  "workloads": {
+    "doomslug-net6-emscripten": {
+      "abstract": true,
+      "description": "Emscripten SDK compiler tooling",
+      "packs": [
+        "Doomslug.Emscripten.net6"
+      ]
+    }
+  },
+  "packs": {
+    "Doomslug.Emscripten.net6" : {
+      "kind": "Sdk",
+      "version": "6.0.0",
+      "alias-to": {
+        "any": "Doomslug.Emscripten"
+      }
+    }
+  }
+}

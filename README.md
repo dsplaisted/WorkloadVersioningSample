@@ -27,7 +27,7 @@
 - **WebAssembly.Sdk**: Build logic for WASM / AOT
 - **Mono.browser-wasm**: Mono browser-wasm runtime pack.  Not imported as SDK, but via KnownFrameworkReference or KnownRuntimePack items.
 - **AOT.Cross.browser-wasm**: AOT Compiler EXE (mono-aot-cross.exe)
-- **MonoAOTCompiler.Task**: Includes (only) the MonoAOTCompiler task
+- **MonoAOTCompiler.Task**: Includes the MonoAOTCompiler task, which wraps the AOT compiler (mono-aot-cross.exe)
 - **MonoTargets.Sdk**: Mono MSBuild logic and tasks shared between ios, android, and wasm
 - **Emscripten.Node**: Includes Node
 - **Emscripten.Python**: Includes Python

@@ -1,0 +1,4 @@
+@echo off
+
+SET DOTNETSDK_WORKLOAD_PACK_ROOTS=%~dp0workloads
+SET DOTNETSDK_WORKLOAD_MANIFEST_ROOTS=%~dp0workloads\sdk-manifests

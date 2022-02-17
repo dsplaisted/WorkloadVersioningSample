@@ -1,0 +1,16 @@
+<Project>
+  <!-- <Import Project="Sdk.props" Sdk="Doomslug.Emscripten.net6" /> -->
+
+  <ImportGroup Condition="'$(UseDoomSlug)' == 'true'">
+    <Import Project="Sdk.props" Sdk="Doomslug.WebAssembly.Sdk" />
+    <Import Project="Sdk.targets" Sdk="Doomslug.WebAssembly.Sdk" />
+    <Import Project="Sdk.props" Sdk="Doomslug.MonoTargets.Sdk" />
+    <Import Project="Sdk.targets" Sdk="Doomslug.MonoTargets.Sdk" />
+  </ImportGroup>
+
+  <ImportGroup Condition="'$(UseDoomSlug)' == 'true' And '$(TargetFrameworkIdentifier)' == '.NETCoreApp' And '$(TargetFrameworkVersion)' == '6.0'">
+    <Import Project="Sdk.props" Sdk="Doomslug.AOT.browser-wasm.net6" />
+    <Import Project="Sdk.props" Sdk="Doomslug.MonoAOTCompiler.Task.net6" />
+    <Import Project="Sdk.props" Sdk="Doomslug.Emscripten.net6" />
+  </ImportGroup>
+</Project>

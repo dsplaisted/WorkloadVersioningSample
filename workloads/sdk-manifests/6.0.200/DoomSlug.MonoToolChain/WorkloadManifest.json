@@ -1,0 +1,30 @@
+{
+  "version": "6.0.0",
+  "workloads": {
+    "doomslug-wasm-tools": {
+      "abstract": false,
+      "description": "Wasm tools",
+      "packs": [
+        "Doomslug.WebAssembly.Sdk"
+      ],
+      "extends": [ "doomslug-mono-tooling", "doomslug-wasm-tools-net6-abstract"]
+    },
+    "doomslug-mono-tooling": {
+      "abstract": true,
+      "description": "Mono tools",
+      "packs": [
+        "Doomslug.MonoTargets.Sdk"
+      ]
+    }
+  },
+  "packs": {
+    "Doomslug.WebAssembly.Sdk" : {
+      "kind": "Sdk",
+      "version": "6.0.0"
+    },
+    "Doomslug.MonoTargets.Sdk" : {
+      "kind": "Sdk",
+      "version": "6.0.0"
+    }
+  }
+}

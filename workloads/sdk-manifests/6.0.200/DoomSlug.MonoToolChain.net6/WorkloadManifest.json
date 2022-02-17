@@ -1,0 +1,44 @@
+{
+  "version": "6.0.0",
+  "workloads": {
+    "doomslug-wasm-tools-net6-abstract": {
+      "abstract": true,
+      "description": ".NET 6 wasm tools",
+      "packs": [
+        "Doomslug.browser-wasm.net6",
+        "Doomslug.AOT.browser-wasm.net6"
+      ],
+      "extends": [ "doomslug-net6-mono-tooling", "doomslug-net6-emscripten"]
+    },
+    "doomslug-net6-mono-tooling": {
+      "abstract": true,
+      "description": ".NET 6 Mono tools",
+      "packs": [
+        "Doomslug.MonoAOTCompiler.Task.net6"
+      ]
+    }
+  },
+  "packs": {
+    "Doomslug.browser-wasm.net6" : {
+      "kind": "framework",
+      "version": "6.0.0",
+      "alias-to": {
+        "any": "Doomslug.browser-wasm"
+      }
+    },
+    "Doomslug.AOT.browser-wasm.net6" : {
+      "kind": "Sdk",
+      "version": "6.0.0",
+      "alias-to": {
+        "any": "Doomslug.AOT.browser-wasm"
+      }
+    },
+    "Doomslug.MonoAOTCompiler.Task.net6" : {
+      "kind": "Sdk",
+      "version": "6.0.0",
+      "alias-to": {
+        "any": "Doomslug.MonoAOTCompiler.Task"
+      }
+    }
+  }
+}

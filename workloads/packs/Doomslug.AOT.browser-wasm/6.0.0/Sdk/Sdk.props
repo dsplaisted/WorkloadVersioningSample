@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup>
+    <DoomslugAOTPath>$(MSBuildThisFileDirectory)</DoomslugAOTPath>
+  </PropertyGroup>
+</Project>

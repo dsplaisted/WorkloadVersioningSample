@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup>
+    <DoomslugEmscriptenPath>$(MSBuildThisFileDirectory)</DoomslugEmscriptenPath>
+  </PropertyGroup>
+</Project>
