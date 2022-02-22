@@ -45,7 +45,7 @@ graph TD;
     microsoft-net-runtime-mono-tooling.6.0.100-->Microsoft.NET.Runtime.MonoAOTCompiler.Task.6.0.100[MonoAOTCompiler.Task];
     end
     
-    wasm-tools.6.0.100----->wasm-tools-net6-abstract
+    wasm-tools.6.0.100----->|extends|wasm-tools-net6-abstract
     %%microsoft-net-runtime-mono-tooling-->microsoft-net-runtime.6-mono-tooling
 
     subgraph Mono.ToolChain.net6
@@ -67,15 +67,17 @@ graph TD;
     end
     
     subgraph Mono.ToolChain.7.0.100
-    wasm-tools.7.0.100([wasm-tools])-->Microsoft.NET.Runtime.WebAssembly.Sdk.7.0.100[WebAssembly.Sdk];
-    wasm-tools.7.0.100-->|extends|microsoft-net-runtime-mono-tooling.7.0.100;
+    wasm-tools.7.0.100([wasm-tools])-->|extends|wasm-tools-sdk.7.0.100
+    wasm-tools-net6([wasm-tools-net6])-->|extends|wasm-tools-sdk.7.0.100
+    wasm-tools-sdk.7.0.100(["wasm-tools-sdk<BR><I>(abstract)</I>"])-->Microsoft.NET.Runtime.WebAssembly.Sdk.7.0.100[WebAssembly.Sdk];
+    wasm-tools-sdk.7.0.100-->|extends|microsoft-net-runtime-mono-tooling.7.0.100;
     microsoft-net-runtime-mono-tooling.7.0.100(["microsoft-net-runtime-mono-tooling<BR><I>(abstract)</I>"])-->Microsoft.NET.Runtime.MonoTargets.Sdk.7.0.100[MonoTargets.Sdk];
     microsoft-net-runtime-mono-tooling.7.0.100-->Microsoft.NET.Runtime.MonoAOTCompiler.Task.7.0.100[MonoAOTCompiler.Task];
-    wasm-tools-net6-->wasm-tools.7.0.100
+    
     end
     
-    wasm-tools.7.0.100---->wasm-tools-net7-abstract
-    wasm-tools-net6----->wasm-tools-net6-abstract
+    wasm-tools.7.0.100----->|extends|wasm-tools-net7-abstract
+    wasm-tools-net6----->|extends|wasm-tools-net6-abstract
     
     subgraph Mono.ToolChain.net7
     wasm-tools-net7-abstract([wasm-tools-net7-abstract])-->Mono.browser-wasm.net7
